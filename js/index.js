@@ -16,130 +16,51 @@ let precioCombo5 = 700;
 let nombreCombo6 = "hamburguesa vegetariana";
 let precioCombo6 = 600;
 
+
 let unicaCompra;
 let cantidadAComprar;
 let totalVenta = 0;
-let vecesAComprar = parseInt(prompt("Ingrese la cantidad de combos distintos que desea comprar:"));
+let combosAComprar = parseInt(prompt("Ingrese la cantidad de combos distintos que desea comprar:"));
 
-function solicitarPedido (combopedido, nombrecombo, cantidad, total, precio, unica) {
-    if(combopedido == nombrecombo){
+function solicitarPedido (combo, nombre, cantidad, total, precio, unica) {
 
-        cantidad = parseInt(prompt("¿Cuántas hamburguesas simples desea comprar?"));
+    if(combo == nombre){
+
+        cantidad = parseInt(prompt("¿Cuántas hamburguesas del combo elegido desea comprar?"));
         total += (cantidad * precio);
         unica = prompt("¿Será esta su compra final?").toLowerCase();
         if(unica == "si"){
             return;
         }
-        else{
-            continue;
-        }
     }
 }
 
-for(let i = 0; i < vecesAComprar; i++){
+function productoNoExistente () {
+    alert("No tenemos ese tipo de hamburguesa")
+}
+
+for (let i = 0; i < combosAComprar; i++){
 
     let comboPedido = prompt("Ingrese el nombre del combo que desea comprar \n1)Hamburguesa simple \n2)Hamburguesa doble \n3)Hamburguesa triple \n4)Hamburguesa clasica \n5)Hamburguesa de pollo \n6)Hamburguesa vegetariana").toLowerCase();
 
-    function solicitarPedido (comboPedido, nombreCombo1, cantidadAComprar, totalVenta, precioCombo1, unicaCompra);
+    solicitarPedido (comboPedido, nombreCombo1, cantidadAComprar, totalVenta, precioCombo1, unicaCompra);
 
-    function solicitarPedido (comboPedido, nombreCombo2, cantidadAComprar, totalVenta, precioCombo2, unicaCompra);
+    solicitarPedido (comboPedido, nombreCombo2, cantidadAComprar, totalVenta, precioCombo2, unicaCompra);
 
-    function solicitarPedido (comboPedido, nombreCombo3, cantidadAComprar, totalVenta, precioCombo3, unicaCompra);
+    solicitarPedido (comboPedido, nombreCombo3, cantidadAComprar, totalVenta, precioCombo3, unicaCompra);
 
-    function solicitarPedido (comboPedido, nombreCombo4, cantidadAComprar, totalVenta, precioCombo4, unicaCompra);
+    solicitarPedido (comboPedido, nombreCombo4, cantidadAComprar, totalVenta, precioCombo4, unicaCompra);
 
-    function solicitarPedido (comboPedido, nombreCombo5, cantidadAComprar, totalVenta, precioCombo5, unicaCompra);
+    solicitarPedido (comboPedido, nombreCombo5, cantidadAComprar, totalVenta, precioCombo5, unicaCompra);
 
-    function solicitarPedido (comboPedido, nombreCombo6, cantidadAComprar, totalVenta, precioCombo6, unicaCompra);
+    solicitarPedido (comboPedido, nombreCombo6, cantidadAComprar, totalVenta, precioCombo6, unicaCompra);
     
-    
-    else {
-        alert("No tenemos ese tipo de hamburguesa");
+    if ((comboPedido != nombreCombo1.toLowerCase()) && (comboPedido != nombreCombo2.toLowerCase()) && (comboPedido != nombreCombo3.toLowerCase()) && (comboPedido != nombreCombo4.toLowerCase()) && (comboPedido != nombreCombo5.toLowerCase()) && (comboPedido != nombreCombo6.toLowerCase())) {
+        productoNoExistente ()
     }
+
 }
 
-alert("El total de su compra es de $" + totalVenta)
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*if(comboPedido == nombreCombo1){
-
-    cantidadAComprar = parseInt(prompt("¿Cuántas hamburguesas simples desea comprar?"));
-    totalVenta += (cantidadAComprar * precioCombo1);
-    unicaCompra = prompt("¿Será esta su compra final?").toLowerCase();
-    if(unicaCompra == "si"){
-        break;
-    }
-    else{
-        continue;
-    }
-}
-
-else if(comboPedido == nombreCombo2){
-    cantidadAComprar = parseInt(prompt("¿Cuántas hamburguesas dobles desea comprar?"));
-    totalVenta += (cantidadAComprar * precioCombo2);
-    unicaCompra = prompt("¿Será esta su compra final?").toLowerCase();
-    if(unicaCompra == "si"){
-        break;
-    }
-    else{
-        continue;
-    }
-}
-else if(comboPedido == nombreCombo3){
-    cantidadAComprar = parseInt(prompt("¿Cuántas hamburguesas triples desea comprar?"));
-    totalVenta += (cantidadAComprar * precioCombo3);
-    unicaCompra = prompt("¿Será esta su compra final?").toLowerCase();
-    if(unicaCompra == "si"){
-        break;
-    }
-    else{
-        continue;
-    }
-}
-else if(comboPedido == nombreCombo4){
-    cantidadAComprar = parseInt(prompt("¿Cuántas hamburguesas clásicas desea comprar?"));
-    totalVenta += (cantidadAComprar * precioCombo4);
-    unicaCompra = prompt("¿Será esta su compra final?").toLowerCase();
-    if(unicaCompra == "si"){
-        break;
-    }
-    else{
-        continue;
-    }
-}
-else if(comboPedido == nombreCombo5){
-    cantidadAComprar = parseInt(prompt("¿Cuántas hamburguesas de pollo desea comprar?"));
-    totalVenta += (cantidadAComprar * precioCombo5);
-    unicaCompra = prompt("¿Será esta su compra final?").toLowerCase();
-    if(unicaCompra == "si"){
-        break;
-    }
-    else{
-        continue;
-    }
-}
-else if(comboPedido == nombreCombo6){
-    cantidadAComprar = parseInt(prompt("¿Cuántas hamburguesas vegetarianas desea comprar?"));
-    totalVenta += (cantidadAComprar * precioCombo6);
-    unicaCompra = prompt("¿Será esta su compra final?").toLowerCase();
-    if(unicaCompra == "si"){
-        break;
-    }
-    else{
-        continue;
-    }
-}*\
-
+alert("El total de su compra es de $" + totalVenta)  
 
 
