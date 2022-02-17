@@ -61,6 +61,6 @@ for (let i = 0; i < combosAComprar; i++){
 
 }
 
-alert("El total de su compra es de $" + totalVenta)  
+alert("El total de su compra es de $" + totalVenta) 
 
 
