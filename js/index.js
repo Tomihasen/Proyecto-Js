@@ -21,7 +21,7 @@ function solicitarPedido (combo, nombre, cantidad, total, precio) {
 
     if(combo == nombre){
         cantidad = parseInt(prompt("¿Cuántas hamburguesas del combo elegido desea comprar?"));
-        total += (cantidad * precio);
+        total += cantidad * precio;
     }
 }
 
@@ -43,7 +43,7 @@ for (let i = 0; i < combosAComprar; i++){
 
     solicitarPedido (comboPedido, listaDeCombos[4].nombre, cantidadAComprar, totalVenta, listaDeCombos[4].precio);
 
-    solicitarPedido (comboPedido, listaDeCombos[5], cantidadAComprar, totalVenta, listaDeCombos[5].precio);
+    solicitarPedido (comboPedido, listaDeCombos[5].nombre, cantidadAComprar, totalVenta, listaDeCombos[5].precio);
     
     if ((comboPedido != combo1.nombre) && (comboPedido != combo2.nombre) && (comboPedido != combo3.nombre) && (comboPedido != combo4.nombre) && (comboPedido != combo5.nombre) && (comboPedido != combo6.nombre)) {
         productoNoExistente ()
