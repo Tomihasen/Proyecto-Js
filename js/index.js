@@ -1,4 +1,7 @@
 
+let titulo = document.getElementById("titulo")
+
+
 function Combo (nombre, precio) {
     this.nombre = nombre;
     this.precio = precio;
@@ -12,6 +15,12 @@ const combo5 = new Combo ("hamburguesa de pollo", 700)
 const combo6 = new Combo ("hamburguesa vegetariana", 600)
 
 const listaDeCombos = [combo1, combo2, combo3, combo4, combo5, combo6];
+
+for (const combo of listaDeCombos) {
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML = `<h2> ${combo.nombre} </h2> 
+                            <p> ${combo.precio} </p>`
+}
 
 let cantidadAComprar;
 let totalVenta = 0;
@@ -52,5 +61,7 @@ for (let i = 0; i < combosAComprar; i++){
 }
 
 alert("El total de su compra es de $" + totalVenta) 
+
+
 
 
